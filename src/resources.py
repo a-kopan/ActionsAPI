@@ -1,5 +1,4 @@
-from .db_interactions import get_records
-
+from db_interactions import get_records
 
 wrong_arg_message:dict = dict(
     cod=404,
@@ -16,11 +15,12 @@ help_message:dict = dict(
     data = dict(
     Company = "Folder for list of companies, separated by &",
     Day = "Singular day",
-    Days ="Range of days",
+    Date_s ="Starting point of range of days (included)",
+    Date_e ="Ending point of range of days (included)",
     Companies_args = company_names,
     Templates = [
         "URL/companies/<companies>?date=12-12-2012>",
-        "URL/companies/<companies>?date_start=...&date_finish=..."
+        "URL/companies/<companies>?date_s=...&date_e=..."
     ]
     )
 )

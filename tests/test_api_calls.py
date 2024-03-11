@@ -1,7 +1,7 @@
 import unittest
 import requests
 import json
-from responses_api_calls import *
+from .responses_api_calls import *
 
 """
 File made for purposes of testing the whole API call mechanism
@@ -9,7 +9,6 @@ Requires API to be running
 """
 
 base_url = "http://127.0.0.1:5000/companies/"
-#Apple&Alphabet&Amazon&Netflix?date_s=2021-12-06&date_e=2021-12-10'
 
 class TestApiCalls(unittest.TestCase):
     #test_ammountOfCompanies_date/rangeOfDates
