@@ -10,7 +10,7 @@ no_data_message:dict = dict(
     message = "There is no existing record for the date provided"
 )
 
-company_names:list = ["Apple", "Alphabet", "Amazon", "Netflix", "Meta Platform"]
+company_names:list = ["Apple", "Alphabet", "Amazon", "Netflix", "Meta"]
 help_message:dict = dict(
     cod = 200,
     data = dict(
@@ -50,13 +50,14 @@ def format_responses(response:list[tuple]) -> dict:
     for comp in response: 
         if comp[1]: 
             is_empty = False
-            break
-        
+            break    
     if not response or is_empty: raise ValueError
+    
     final_data = []
     for (company_name,rows) in response:
         company_data = dict(
             company=company_name,
+            cod=200,
             data=[]
         )
         for row in rows:

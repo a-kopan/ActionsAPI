@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 import src.resources as rc
-
+import time
 app = Flask(__name__)
 
 
@@ -15,7 +15,6 @@ def show_help():
 #URL/companies/<companies>?date_start=...&date_finish=...
 @app.route("/companies/<company>")
 def get_company(company):
-    #db_path = str(Path(__file__).parent / "database/company_actions.db")
     db_path = r"database\company_actions.db"
     #raw_data holds all potential arguments
     #For not provided arguments holds None
@@ -35,6 +34,8 @@ def get_company(company):
     except Exception: return jsonify(rc.wrong_arg_message)
     #If the data was correctly input the data is returned
     else: return jsonify(rows)
+        
+    
     
 if __name__=="__main__":
     app.run(debug=True) 
