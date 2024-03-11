@@ -5,7 +5,8 @@ File which holds predicted responses of api calls test
 Used for assertions (equality comparison)
 """
 
-response_single_date = json.loads("""[
+response_single_date = json.loads(
+    """[
     {
         "cod": 200,
         "company": "Apple",
@@ -21,9 +22,11 @@ response_single_date = json.loads("""[
             }
         ]
     }
-]""")
+]"""
+)
 
-response_single_range = json.loads("""[
+response_single_range = json.loads(
+    """[
     {
         "cod": 200,
         "company": "Apple",
@@ -57,9 +60,11 @@ response_single_range = json.loads("""[
             }
         ]
     }
-]""")
+]"""
+)
 
-response_multi_date = json.loads("""[
+response_multi_date = json.loads(
+    """[
     {
         "cod": 200,
         "company": "Apple",
@@ -90,9 +95,11 @@ response_multi_date = json.loads("""[
             }
         ]
     }
-]""")
+]"""
+)
 
-response_multi_range = json.loads("""[
+response_multi_range = json.loads(
+    """[
     {
         "cod": 200,
         "company": "Apple",
@@ -159,9 +166,11 @@ response_multi_range = json.loads("""[
             }
         ]
     }
-]""")
+]"""
+)
 
-response_multi_both = json.loads("""[
+response_multi_both = json.loads(
+    """[
     {
         "cod": 200,
         "company": "Meta",
@@ -192,14 +201,19 @@ response_multi_both = json.loads("""[
             }
         ]
     }
-]""")
+]"""
+)
 
-response_wrong_arg = json.loads("""{
+response_wrong_arg = json.loads(
+    """{
     "cod": 404,
     "message": "Wrong arguments provided. For more info..."
-}""")
+}"""
+)
 
-response_no_data = json.loads("""{
+response_no_data = json.loads(
+    """{
     "cod": 404,
     "message": "There is no existing record for the date provided"
-}""")
+}"""
+)
