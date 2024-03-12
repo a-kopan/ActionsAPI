@@ -30,7 +30,7 @@ def get_records(data: dict, db_path: str, single_day: bool) -> list:
     con = sqlite3.connect(db_path)
     cur = con.cursor()
     response = []
-    for company in data["companies"]:
+    for company in set(data["companies"]):
         # Assembling and executing of the query
         query = assemble_query(data, single_day, company)
         rows = cur.execute(query).fetchall()
